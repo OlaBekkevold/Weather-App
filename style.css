@@ -1,0 +1,17 @@
+#top {
+    background-color: aqua;
+    height: 85px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.txt {
+    font-family: sans-serif;
+}
+
+#title {
+    position: absolute;
+    left: 40.5%;
+}
