@@ -13,5 +13,29 @@
 
 #title {
     position: absolute;
-    left: 40.5%;
+    left: 41%;
+}
+
+#display {
+    position: absolute;
+    left: 55%;
+    top: 16%;
+    background-color: grey;
+    width: 28%;
+    height: 79%;
+    border-radius: 26px;
+}
+
+#infoHead {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    border-bottom: 3px solid black;
+    
+  }
+
+#location {
+    position: absolute;
+    left: 3%;
 }
