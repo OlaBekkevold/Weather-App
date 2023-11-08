@@ -19,7 +19,19 @@
 
 #weatherIcon {
     position: absolute;
-    top: -34%;
+    top: -30%;
     left: -5%;
-    font-size: 303%;
+    width: 44%;
+  }
+
+#country {
+    position: absolute;
+    top: 4.5%;
+    left: 120%;
+  }
+
+  #weatherDescription {
+    position: absolute;
+    top: -33.5%;
+    left: 56%;
   }
