@@ -1,6 +1,15 @@
 // The API key is stored in a separate untracked file
 import {apiKey} from './config.js';
 
+const cityName = document.getElementById('cityName');
+const countryName = document.getElementById('country');
+const temperature = document.getElementById('temperature');
+const weatherDescription = document.getElementById('weatherDescription');
+const highLow = document.getElementById('highestLowest');
+const weatherIcon = document.getElementById('weatherIcon');
+const wind = document.getElementById('wind');
+const background = document.getElementById('backgroundImg');
+
 // This function will activate when the page is loaded
 window.addEventListener('load', () => {
     let long;
@@ -28,8 +37,42 @@ window.addEventListener('load', () => {
                 const {country} = data.sys;
                 const {temp_min, temp_max} = data.main;
                 const {speed} = data.wind;
+                const {main} = data.weather[0];
                 
                 const iconUrl = `http://openweathermap.org/img/wn/${icon}.png`;
+
+                // Displays the data on the page
+                cityName.textContent = place;
+                countryName.textContent = country;
+                temperature.textContent = `${temp.toFixed(2)} °C`;
+                weatherDescription.textContent = description;
+                highLow.textContent = `${temp_min.toFixed(2)} °C / ${temp_max.toFixed(2)} °C`;
+                weatherIcon.src = iconUrl;
+                wind.textContent = `🍃: ${speed} m/s`;
+                // Changes the background image based on the weather
+                switch(main) {
+                    case "Clouds":
+                        background.src = "img/cloudy.jpg";
+                        break;
+                    case "Clear":
+                        background.src = "img/clear.jpg";
+                        break;
+                    case "Rain":
+                        background.src = "img/rain.jpg";
+                        break;
+                    case "Snow":
+                        background.src = "img/snow.jpg";
+                        break;
+                    case "Thunderstorm":
+                        background.src = "img/thunderstorm.jpg";
+                        break;
+                    case "Drizzle":
+                        background.src = "img/drizzle.jpg";
+                        break;
+                    default:
+                        background.src = "img/default.jpg";
+
+                }
             })
         });
     }
