@@ -12,26 +12,33 @@
 }
 
 #mainInfo {
-    position: absolute;
-    top: 20%;
-    left: 10%;  
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  background-color: rgba(128, 128, 128, 0.60);
+  width: 23%;
+  height: 46%;
+  padding-left: 15px;
+  padding-top: 88px;
+  border-radius: 10%;
+  
 }
 
 #weatherIcon {
-    position: absolute;
-    top: -30%;
-    left: -5%;
-    width: 44%;
-  }
+  position: absolute;
+  top: 3%;
+  left: 0%;
+  width: 23%;
+}
 
 #country {
     position: absolute;
-    top: 4.5%;
-    left: 120%;
+    top: 23.5%;
+    left: 60%;
   }
 
   #weatherDescription {
     position: absolute;
-    top: -33.5%;
-    left: 56%;
+    top: 6.5%;
+    left: 49%;
   }
