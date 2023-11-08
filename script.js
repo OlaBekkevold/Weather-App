@@ -23,7 +23,7 @@ window.addEventListener('load', () => {
             // Calls the API with the user's location
             const base = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=metric`;
             console.log(base);
-            // Fetches the data from the API
+            // Fetches the data from the API 
             fetch(base)
             .then((response) => {
                 return response.json();
@@ -73,7 +73,20 @@ window.addEventListener('load', () => {
                         background.src = "img/default.jpg";
 
                 }
+            });
+
+            const forecast = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&appid=${apiKey}&units=metric`;
+            console.log(forecast);
+
+            fetch(forecast)
+            .then((response) => {
+                return response.json();
             })
+
+            .then((data) => {
+                console.log(data);
+            });
+
         });
     }
 });
