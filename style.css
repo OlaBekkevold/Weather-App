@@ -73,7 +73,13 @@
   .itemTemp {
     position: relative;
     top: -36%;
-    left: 34%;
+    left: 22%;
     font-family: sans-serif;
     font-size: 16px;
+  }
+
+  #search {
+    position: absolute;
+    top: 12%;
+    left: 11%;
   }
