@@ -42,3 +42,38 @@
     top: 6.5%;
     left: 49%;
   }
+
+  #forecast {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 73px 73px 73px 73px 73px 73px 73px 73px 73px;
+    top: 21%;
+    left: 51%;
+    background-color: rgba(128, 128, 128, 0.60);
+    width: 42.8%;
+    height: 12%;
+    border-radius: 25px;
+  }
+
+  .itemTime {
+    position: relative;
+    top: -7%;
+    left: 18%;
+    font-family: sans-serif;
+    font-size: 16px;
+  }
+
+  .itemImg {
+    position: relative;
+    top: -20%;
+    left: 15%;
+    width: 63%;
+  }
+  
+  .itemTemp {
+    position: relative;
+    top: -36%;
+    left: 34%;
+    font-family: sans-serif;
+    font-size: 16px;
+  }
