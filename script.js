@@ -1,6 +1,7 @@
 // The API key is stored in a separate untracked file
 import {apiKey} from './config.js';
 
+// global variables
 const cityName = document.getElementById('cityName');
 const countryName = document.getElementById('country');
 const temperature = document.getElementById('temperature');
@@ -9,6 +10,12 @@ const highLow = document.getElementById('highestLowest');
 const weatherIcon = document.getElementById('weatherIcon');
 const wind = document.getElementById('wind');
 const background = document.getElementById('backgroundImg');
+
+const itemTime = document.querySelectorAll('.itemTime');
+const itemImg = document.querySelectorAll('.itemImg');
+const itemTemp = document.querySelectorAll('.itemTemp');
+
+
 
 // This function will activate when the page is loaded
 window.addEventListener('load', () => {
@@ -85,6 +92,20 @@ window.addEventListener('load', () => {
 
             .then((data) => {
                 console.log(data);
+                // Iterates through the first 9 list of forecasts and stores the data in variables
+                for (let i = 0; i < 9; i++) {
+                    const {temp} = data.list[i].main;
+                    const {icon} = data.list[i].weather[0];
+                    const {dt_txt} = data.list[i];
+                    const time = dt_txt.slice(11, 16);
+
+                    // Also iterates through the HTML elements and displays the data
+                    itemTemp[i].textContent = `${temp.toFixed(1)} °C`;
+                    itemImg[i].src = `http://openweathermap.org/img/wn/${icon}.png`;
+                    itemTime[i].textContent = time;
+                }
+
+
             });
 
         });
