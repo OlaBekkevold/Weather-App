@@ -37,13 +37,13 @@
     left: 60%;
   }
 
-  #weatherDescription {
+#weatherDescription {
     position: absolute;
     top: 6.5%;
     left: 49%;
   }
 
-  #forecast {
+#forecast {
     position: absolute;
     display: grid;
     grid-template-columns: 73px 73px 73px 73px 73px 73px 73px 73px 73px;
@@ -55,7 +55,7 @@
     border-radius: 25px;
   }
 
-  .itemTime {
+.itemTime {
     position: relative;
     top: -7%;
     left: 18%;
@@ -63,14 +63,14 @@
     font-size: 16px;
   }
 
-  .itemImg {
+.itemImg {
     position: relative;
     top: -20%;
     left: 15%;
     width: 63%;
   }
   
-  .itemTemp {
+.itemTemp {
     position: relative;
     top: -36%;
     left: 22%;
@@ -78,8 +78,27 @@
     font-size: 16px;
   }
 
-  #search {
-    position: absolute;
-    top: 12%;
-    left: 11%;
-  }
+#search {
+  position: absolute;
+  top: 12%;
+  left: 11%;
+}
+
+#searchBtn:hover {
+  cursor: pointer;
+}
+
+#currentLoc {
+  position: absolute;
+  top: -26%;
+  left: 108%;
+}
+
+#currentLoc:hover {
+  cursor: pointer;
+}
+
+#currentLoc:active {
+  transform: translateY(4px);
+}
+

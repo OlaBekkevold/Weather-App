@@ -10,6 +10,7 @@ const highLow = document.getElementById('highestLowest');
 const weatherIcon = document.getElementById('weatherIcon');
 const wind = document.getElementById('wind');
 const background = document.getElementById('backgroundImg');
+const currentLoc = document.getElementById('currentLoc');
 
 const itemTime = document.querySelectorAll('.itemTime');
 const itemImg = document.querySelectorAll('.itemImg');
@@ -17,8 +18,9 @@ const itemTemp = document.querySelectorAll('.itemTemp');
 
 
 
-// This function will activate when the page is loaded
-window.addEventListener('load', () => {
+
+// Function that uses the user's location to call the API
+function userLoc() {
     let long;
     let lat;
     // Checks if the user's location is available
@@ -110,12 +112,9 @@ window.addEventListener('load', () => {
 
         });
     }
-});
+}
 
-
-
-
-
+currentLoc.addEventListener('click', userLoc);
 
 
 
