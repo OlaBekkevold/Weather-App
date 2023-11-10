@@ -121,12 +121,18 @@ currentLoc.addEventListener('click', userLoc);
 // Function that uses the user's input to call the API
 function searchLoc() {
     const location = searchInput.value;
-    const base = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}&units=metric`;
-    console.log(base);
-            // Fetches the data from the API 
+    // Checks if the user has entered a location
+    if(location.trim() === "") {
+        alert("Please enter a location");
+        
+    } else {
+        const base = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}&units=metric`;
+        console.log(base);
+        // Fetches the data from the API 
             fetch(base)
             .then((response) => {
                 return response.json();
+            
             })
             // Stores selected data from the API in variables
             .then((data) => {
@@ -201,6 +207,8 @@ function searchLoc() {
 
             });
     searchInput.value = "";
+    }
+    
 }
 
 searchBtn.addEventListener('click', searchLoc);
