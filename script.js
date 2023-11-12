@@ -55,9 +55,9 @@ function userLoc() {
                 // Displays the data on the page
                 cityName.textContent = place;
                 countryName.textContent = country;
-                temperature.textContent = `${temp.toFixed(2)} °C`;
+                temperature.textContent = `${temp.toFixed(0)} °C`;
                 weatherDescription.textContent = description;
-                highLow.textContent = `${temp_min.toFixed(2)} °C / ${temp_max.toFixed(2)} °C`;
+                highLow.textContent = `${temp_min.toFixed(0)} °C / ${temp_max.toFixed(0)} °C`;
                 weatherIcon.src = iconUrl;
                 wind.textContent = `🍃: ${speed} m/s`;
                 // Changes the background image based on the weather
@@ -104,7 +104,7 @@ function userLoc() {
                     const time = dt_txt.slice(11, 16);
 
                     // Also iterates through the HTML elements and displays the data
-                    itemTemp[i].textContent = `${temp.toFixed(1)} °C`;
+                    itemTemp[i].textContent = `${temp.toFixed(0)} °C`;
                     itemImg[i].src = `http://openweathermap.org/img/wn/${icon}.png`;
                     itemTime[i].textContent = time;
                 }
@@ -150,9 +150,9 @@ function searchLoc() {
                 // Displays the data on the page
                 cityName.textContent = place;
                 countryName.textContent = country;
-                temperature.textContent = `${temp.toFixed(2)} °C`;
+                temperature.textContent = `${temp.toFixed(0)} °C`;
                 weatherDescription.textContent = description;
-                highLow.textContent = `${temp_min.toFixed(2)} °C / ${temp_max.toFixed(2)} °C`;
+                highLow.textContent = `${temp_min.toFixed(0)} °C / ${temp_max.toFixed(0)} °C`;
                 weatherIcon.src = iconUrl;
                 wind.textContent = `🍃: ${speed} m/s`;
                 // Changes the background image based on the weather
@@ -199,7 +199,7 @@ function searchLoc() {
                     const time = dt_txt.slice(11, 16);
 
                     // Also iterates through the HTML elements and displays the data
-                    itemTemp[i].textContent = `${temp.toFixed(1)} °C`;
+                    itemTemp[i].textContent = `${temp.toFixed(0)} °C`;
                     itemImg[i].src = `http://openweathermap.org/img/wn/${icon}.png`;
                     itemTime[i].textContent = time;
                 }
