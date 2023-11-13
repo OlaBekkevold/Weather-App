@@ -13,6 +13,8 @@ const background = document.getElementById('backgroundImg');
 const currentLoc = document.getElementById('currentLoc');
 const searchBtn = document.getElementById('searchBtn');
 const searchInput = document.getElementById('searchInput');
+const mainInfo = document.getElementById('mainInfo');
+const forecastMenu = document.getElementById('forecast');
 
 const itemTime = document.querySelectorAll('.itemTime');
 const itemImg = document.querySelectorAll('.itemImg');
@@ -53,6 +55,8 @@ function userLoc() {
                 const iconUrl = `http://openweathermap.org/img/wn/${icon}.png`;
 
                 // Displays the data on the page
+                mainInfo.style.backgroundColor = "rgba(128, 128, 128, 0.70)";
+                forecastMenu.style.backgroundColor = "rgba(128, 128, 128, 0.70)";
                 cityName.textContent = place;
                 countryName.textContent = country;
                 temperature.textContent = `${temp.toFixed(0)} °C`;
@@ -148,6 +152,8 @@ function searchLoc() {
                 const iconUrl = `http://openweathermap.org/img/wn/${icon}.png`;
 
                 // Displays the data on the page
+                mainInfo.style.backgroundColor = "rgba(128, 128, 128, 0.70)";
+                forecastMenu.style.backgroundColor = "rgba(128, 128, 128, 0.70)";
                 cityName.textContent = place;
                 countryName.textContent = country;
                 temperature.textContent = `${temp.toFixed(0)} °C`;

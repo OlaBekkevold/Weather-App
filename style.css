@@ -15,7 +15,7 @@
   position: absolute;
   top: 20%;
   left: 10%;
-  background-color: rgba(128, 128, 128, 0.70);
+  background-color: rgba(128, 128, 128, 0);
   width: 23%;
   height: 46%;
   padding-left: 15px;
@@ -49,7 +49,7 @@
     grid-template-columns: 73px 73px 73px 73px 73px 73px 73px 73px 73px;
     top: 21%;
     left: 51%;
-    background-color: rgba(128, 128, 128, 0.70);
+    background-color: rgba(128, 128, 128, 0);
     width: 42.8%;
     height: 12%;
     border-radius: 25px;
