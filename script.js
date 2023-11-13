@@ -1,6 +1,10 @@
 // The API key is stored in a separate untracked file
 import {apiKey} from './config.js';
 
+// If you don't have config.js, you need to get your own API key from https://openweathermap.org/api and insert it under this line. And comment out the import line above.
+// const apiKey = "";
+
+
 // global variables
 const cityName = document.getElementById('cityName');
 const countryName = document.getElementById('country');

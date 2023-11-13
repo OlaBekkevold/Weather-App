@@ -14,6 +14,9 @@ You can also search for locations all over the world to see the weather data the
 ### Important
 The website doesn't work when running the files locally. You have to use something like the Live Server extension on VS Code or use NodeJS.
 
+### API key
+You have to get your own API key to use this website, which you can get from https://openweathermap.org/api. script.js contains explanations on where to place it.
+
 ### Local weather data
 Press the arrow icon on the top left page and after a few seconds the weather data about your location will appear.
 
