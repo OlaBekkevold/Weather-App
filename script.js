@@ -35,7 +35,7 @@ function userLoc() {
             lat = position.coords.latitude;
             // Calls the API with the user's location
             const base = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=metric`;
-            console.log(base);
+            
             // Fetches the data from the API 
             fetch(base)
             .then((response) => {
@@ -43,7 +43,7 @@ function userLoc() {
             })
             // Stores selected data from the API in variables
             .then((data) => {
-                console.log(data);
+                
                 const {temp} = data.main;
                 const place = data.name;
                 const {description, icon} = data.weather[0];
@@ -91,7 +91,7 @@ function userLoc() {
             });
 
             const forecast = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&appid=${apiKey}&units=metric`;
-            console.log(forecast);
+            
 
             fetch(forecast)
             .then((response) => {
@@ -99,7 +99,7 @@ function userLoc() {
             })
 
             .then((data) => {
-                console.log(data);
+                
                 // Iterates through the first 9 list of forecasts and stores the data in variables
                 for (let i = 0; i < 9; i++) {
                     const {temp} = data.list[i].main;
@@ -131,7 +131,7 @@ function searchLoc() {
         
     } else {
         const base = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}&units=metric`;
-        console.log(base);
+        
         // Fetches the data from the API 
             fetch(base)
             .then((response) => {
@@ -140,7 +140,7 @@ function searchLoc() {
             })
             // Stores selected data from the API in variables
             .then((data) => {
-                console.log(data);
+                
                 const {temp} = data.main;
                 const place = data.name;
                 const {description, icon} = data.weather[0];
@@ -188,7 +188,7 @@ function searchLoc() {
             });
 
             const forecast = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=${apiKey}&units=metric`;
-            console.log(forecast);
+            
 
             fetch(forecast)
             .then((response) => {
@@ -196,7 +196,7 @@ function searchLoc() {
             })
 
             .then((data) => {
-                console.log(data);
+                
                 // Iterates through the first 9 list of forecasts and stores the data in variables
                 for (let i = 0; i < 9; i++) {
                     const {temp} = data.list[i].main;
